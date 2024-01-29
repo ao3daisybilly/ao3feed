@@ -1,0 +1,21 @@
+name: Feed to social media
+on:
+  workflow_dispatch:
+
+jobs:
+  Feed2SocialMedia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Feed to social media
+        uses: lwojcik/github-action-feed-to-social-media@v2
+        with:
+          feedUrl: 'https://archiveofourown.org/tags/37206457/feed.atom'
+          newestItemStrategy: 'latestDate'
+          postFormat: "New post: {title}\n\n{link}{description}"
+          # Twitter settings
+          twitterEnable: true
+          twitterPostFormat: "New post: {title}\n\n{link}{description}"
+          twitterApiKey: '4B9oRCRhYFg00Mc1dx34OAczV'
+          twitterApiKeySecret: 'iLsdoJEPDc3J8LeF4P4TQJFAlgKZOx4FUcZVRJ5WKozfvn3iiC'
+          twitterAccessToken: '1745230599026057216-9ChP8XEZEeO72diJXQSHcyMSpmcqUj'
+          twitterAccessTokenSecret: 'IHnHhEJGowpnBuEQ731bpNGdLOJPkQOshm7Cou7myRBqQ'
